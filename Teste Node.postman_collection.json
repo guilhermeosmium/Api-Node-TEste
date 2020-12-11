@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "65485999-d6a8-41f2-aad9-3bc9f0c656e2",
+		"name": "Teste Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todos Pontos",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6edf1a82-125f-4472-bf2f-955f17e34896",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/pontos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pontos",
+						""
+					]
+				},
+				"description": "Nova Posição"
+			},
+			"response": []
+		},
+		{
+			"name": "Distancia Ponto",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6edf1a82-125f-4472-bf2f-955f17e34896",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/pontos/distancia/5fd3e549750d192e30f08de1?lat=2&lng=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pontos",
+						"distancia",
+						"5fd3e549750d192e30f08de1"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "2"
+						},
+						{
+							"key": "lng",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Nova Posição"
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Ponto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": 1,\n    \"lng\": 2,\n    \"tipo\": \"5fd3e51c750d192e30f08de0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pontos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pontos",
+						""
+					]
+				},
+				"description": "Novo"
+			},
+			"response": []
+		},
+		{
+			"name": "Tipo Novo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Entregador\",\n    \"obs\": \"Posição Entregador\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tipos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tipos",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Novo"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
